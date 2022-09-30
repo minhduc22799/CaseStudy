@@ -227,8 +227,10 @@ function addProductDisplay() {
                     <input type="text" placeholder="Giá cũ" id="input-priceOld" ><br>
                     <input type="text" placeholder="Image" id="input-image" ><br>
                     <input type="text" placeholder="Khối lượng" id="input-mass" ><br>
+                    <p id="check" style="color: red; padding: 15px 0px 0px 25px"></p>
                     <input type="submit" value="Thêm" onclick="addProduct()" id="btn-addProduct">
                      <input type="submit" value="Hủy" onclick="cancelAdd()" id="btn-cancel">
+                  
                 </div>    
     `
     document.getElementById("add-product").innerHTML = dataAdd;
@@ -240,14 +242,14 @@ function addProduct() {
     let priceProduct = +document.getElementById("input-price").value;
     let priceOldProduct = +document.getElementById("input-priceOld").value;
     let massProduct = +document.getElementById("input-mass").value;
-
+    let check = document.getElementById("check");
 
     if (nameProduct == "" || imageProduct == "" || priceProduct == "" || priceOldProduct == "" || massProduct == "") {
-        alert("Không được để trống thông tin");
-    } else if (isNaN(priceProduct) && isNaN(priceOldProduct)) {
-        alert("Giá sản phẩm phải là số")
+        check.innerHTML = "* Không được để trống thông tin"
+    } else if (isNaN(priceProduct) || isNaN(priceOldProduct)) {
+        check.innerHTML = "* Giá sản phẩm phải là số"
     } else if (isNaN(massProduct)) {
-        alert("Khối lượng sản phẩm phải là số")
+        check.innerHTML = "* Khối lượng phải là sô"
     }
     else
         {
@@ -293,15 +295,15 @@ function addProduct() {
 
     function editProduct(index) {
         let nameEdit = prompt("Nhập tên mới")
-        let priceEdit = +prompt("Nhập gía mới")
+        let priceEdit = +prompt("Nhập giá mới")
         let priceOldEdit = +prompt("Nhập giá cũ")
         let massEdit = +prompt("Nhập khối lượng mới")
         let imageEdit = prompt("Nhập hình ảnh mới")
 
 
-        if (nameEdit == "" || imageEdit == "" || priceEdit == "" || priceOldEdit == "" || massEdit == "") {
-            alert("Không được để trống thông tin");
-        } else if (isNaN(priceEdit) && isNaN(priceOldEdit)) {
+        if (nameEdit == "" || priceEdit == ""|| priceOldEdit == "" || massEdit == ""  || imageEdit == "" ) {
+            alert("Không được để trống thông tin ")
+        } else if (isNaN(priceEdit) || isNaN(priceOldEdit)) {
             alert("Giá sản phẩm phải là số")
         } else if (isNaN(massEdit)) {
             alert("Khối lượng sản phẩm phải là số")
