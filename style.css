@@ -70,7 +70,7 @@ header{
 .nav-main{
     height: 45px;
     background: #ffffff;
-    padding-left: 340px;
+    padding-left: 310px;
     margin-bottom: 30px;
     padding-bottom: 100px;
 }
@@ -78,8 +78,7 @@ header{
     list-style: none;
     float: left;
     line-height: 45px;
-    padding: 0 20px;
-    padding-top: 20px;
+    padding: 20px 20px;
     font-size: 22px;
     border-right: 1px solid #FFF;
 }
