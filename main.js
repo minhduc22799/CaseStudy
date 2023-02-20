@@ -1,10 +1,10 @@
-var product1 = new Product("Cookie Chocolate", 50000, 120000, "./image/2.jpg", 160);
+var product1 = new Product("Cookie Chocolate", 50000, 120000, "./image/2.jpg", 50);
 var product2 = new Product("Black Tie Mousse Cake", 200000, 320000, "./image/3.jpg", 360);
-var product3 = new Product("Flan Cake", 300000, 420000, "./image/4.jpg", 460);
-var product4 = new Product("Chocolate Cake", 400000, 520000, "./image/7.jpg", 160);
+var product3 = new Product("Flan Cake", 300000, 420000, "./image/4.jpg", 80);
+var product4 = new Product("Chocolate Cake", 400000, 520000, "./image/7.jpg", 760);
 var product5 = new Product("Red Velvet", 500000, 620000, "./image/6.jpg", 620);
-var product6 = new Product("Wagashi Cake", 400000, 520000, "./image/8.jpg", 560);
-var product7 = new Product("Opera Cake", 900000, 1620000, "./image/99.png", 60);
+var product6 = new Product("Wagashi Cake", 400000, 520000, "./image/8.jpg", 105);
+var product7 = new Product("Opera Cake", 900000, 1620000, "./image/99.png", 90);
 
 arrProductAll = [product1, product2, product3, product4, product5, product6, product7]
 
